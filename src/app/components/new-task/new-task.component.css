@@ -1,0 +1,45 @@
+.new-task {
+   display: inline-block;
+   padding: 22px 20px;
+   background-color: white;
+   border-radius: 15px;
+}
+
+.title {
+   margin-bottom: 10px;
+   font-size: 26px;
+   color: #2d2d2d;
+}
+
+.add-button {
+   padding: 9px 18px;
+   margin-top: auto;
+   background-color: #2875eb;
+   border: none;
+   border-radius: 6px;
+}
+
+.add-button span {
+   color: white;
+}
+
+.name-input {
+   margin-bottom: 8px;
+}
+
+.name-input, .description-input {
+   padding: 8px 10px;
+   border: none;
+   border: 2px solid #dedede;
+   border-radius: 6px;
+}
+
+.flex-container {
+   display: flex;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   margin-right: 15px;
+}
