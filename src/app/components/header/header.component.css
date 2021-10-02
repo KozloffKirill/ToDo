@@ -1,0 +1,17 @@
+:host {
+   display: block;
+
+   padding: 15px 0px;
+
+   background-color: #2675eb;
+}
+
+.wrapper {
+   max-width: 1060px;
+   margin: auto;
+}
+
+.title {
+   color: white;
+   font-size: 32px;
+}
