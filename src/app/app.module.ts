@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 import { HeaderComponent } from './components/header/header.component';
 import { NewTaskComponent } from './components/new-task/new-task.component';
 import { TasksComponent } from './components/tasks/tasks.component';
+import * as fromTasks from './store/tasks.reducer';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,9 @@ import { TasksComponent } from './components/tasks/tasks.component';
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({}, {}),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+    StoreModule.forRoot({ tasks: fromTasks.tasksReducer }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    StoreModule.forFeature(fromTasks.tasksFeatureKey, fromTasks._tasksReducer)
   ],
   providers: [],
   bootstrap: [AppComponent]
