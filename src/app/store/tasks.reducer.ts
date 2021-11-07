@@ -15,9 +15,10 @@ export const initialState: ITasksState = {
 export const _tasksReducer = createReducer(
    initialState,
 
-   on(TasksActions.addTask, (state, task) => (
+   on(TasksActions.addTaskSuccess, (state, task) => (
       {
-         ...state
+         ...state,
+         tasks: [...state.tasks, task.task]
       }
    )),
 );

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { ITask, TaskType } from 'src/app/models/tasks';
+import { addTask } from 'src/app/store/tasks.actions';
 
 @Component({
   selector: 'app-new-task',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewTaskComponent implements OnInit {
 
-  constructor() { }
+  taskName: string = '';
+  taskDescription: string = '';
+
+  constructor(
+    private _store: Store
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  public addTask(): void {
+    const newTask: ITask = {
+      name: this.taskName,
+      description: this.taskDescription,
+      status: TaskType.Backlog
+    };
+    this._store.dispatch(addTask({ task: newTask }));
+
+    this.taskName = '';
+    this.taskDescription = '';
   }
 
 }

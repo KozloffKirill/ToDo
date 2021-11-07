@@ -6,7 +6,7 @@
 }
 
 .title {
-   margin-bottom: 10px;
+   margin-bottom: 14px;
    font-size: 26px;
    color: #2d2d2d;
 }
@@ -17,6 +17,15 @@
    background-color: #2875eb;
    border: none;
    border-radius: 6px;
+   transition: opacity 0.2s linear;
+}
+
+.add-button:hover:not(:disabled) {
+   opacity: 0.8;
+}
+
+.add-button:disabled {
+   background-color: #8ca6cc;
 }
 
 .add-button span {
@@ -38,7 +47,7 @@
    display: flex;
 }
 
-form {
+.inputs {
    display: flex;
    flex-direction: column;
    margin-right: 15px;

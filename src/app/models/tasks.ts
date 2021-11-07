@@ -1,8 +1,8 @@
 export enum TaskType {
-   Backlog,
-   Active,
-   Completed,
-   Trash
+   Backlog = "Backlog",
+   Active = "Active",
+   Completed = "Completed",
+   Trash = "Trash"
 }
 
 export enum PriorityType {

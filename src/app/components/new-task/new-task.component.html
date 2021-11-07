@@ -1,11 +1,11 @@
 <div class="new-task">
    <p class="title">Новая задача</p>
    <div class="flex-container">
-      <form action="#">
-         <input type="text" class="name-input" placeholder="Название задачи...">
-         <input type="text" class="description-input" placeholder="Описание задачи...">
-      </form>
-      <button class="add-button">
+      <div class="inputs">
+         <input type="text" class="name-input" required placeholder="Название задачи..." [(ngModel)]="taskName">
+         <input type="text" class="description-input" placeholder="Описание задачи..." [(ngModel)]="taskDescription">
+      </div>
+      <button class="add-button" [disabled]="taskName == '' || taskDescription == ''" (click)="addTask()">
          <span>&#43; Добавить</span>
       </button>
    </div>
