@@ -3,7 +3,7 @@
       <p class="backlog-title">Бэклог</p>
       <ul class="backlog-tasks">
          <li class="backlog-task" *ngFor="let task of tasks">
-
+            <app-task [taskName]="task.name" [taskDescription]="task.description"></app-task>
          </li>
       </ul>
    </li>

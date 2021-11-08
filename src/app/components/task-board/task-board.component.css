@@ -1,11 +1,20 @@
 .flex-container {
    display: flex;
-   justify-content: space-between;
+}
+
+.task-board>li {
+   width: 100%;
+}
+
+.task-board>li:not(:last-child) {
+   margin-right: 30px;
 }
 
 .backlog-title, .active-title, .completed-title, .trash-title {
-   font-size: 20px;
+   display: inline-block;
+   margin-bottom: 20px;
    padding: 7px 12px;
+   font-size: 20px;
    border-radius: 6px;
 }
 
@@ -29,4 +38,6 @@
    background-color: #fbdfdc;
 }
 
-.backlog-task, .active-task, .completed-task, .trash-task {}
+.backlog-task:not(:last-child), .active-task:not(:last-child), .completed-task:not(:last-child), .trash-task:not(:last-child) {
+   margin-bottom: 10px;
+}
