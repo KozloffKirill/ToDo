@@ -12,6 +12,7 @@ import * as fromTasks from './store/tasks.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { TasksEffects } from './store/tasks.effects';
 import { TaskBoardComponent } from './components/task-board/task-board.component';
+import { TaskComponent } from './components/task/task.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TaskBoardComponent } from './components/task-board/task-board.component
     HeaderComponent,
     NewTaskComponent,
     TasksComponent,
-    TaskBoardComponent
+    TaskBoardComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
