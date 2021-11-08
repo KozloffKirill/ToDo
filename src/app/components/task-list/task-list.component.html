@@ -1,0 +1,14 @@
+<div class="container" [ngClass]="{'backlog': taskType == 'Backlog',
+                                 'active': taskType == 'Active',
+                                 'completed': taskType == 'Completed',
+                                 'trash': taskType == 'Trash'}">
+   <p class="title">
+      {{titles[taskType]}}
+   </p>
+   <ul>
+      <li class="task">
+         <app-task [taskName]="'Название задачи'" [taskDescription]="'Описание задачи описание задачи описание задачи'">
+         </app-task>
+      </li>
+   </ul>
+</div>

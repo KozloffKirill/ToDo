@@ -9,35 +9,3 @@
 .task-board>li:not(:last-child) {
    margin-right: 30px;
 }
-
-.backlog-title, .active-title, .completed-title, .trash-title {
-   display: inline-block;
-   margin-bottom: 20px;
-   padding: 7px 12px;
-   font-size: 20px;
-   border-radius: 6px;
-}
-
-.backlog-title {
-   color: #8a8a8a;
-   background-color: #e0e0e0;
-}
-
-.active-title {
-   color: #4f8bd9;
-   background-color: #d1e2fc;
-}
-
-.completed-title {
-   color: #79b07e;
-   background-color: #d4f7d7;
-}
-
-.trash-title {
-   color: #b77579;
-   background-color: #fbdfdc;
-}
-
-.backlog-task:not(:last-child), .active-task:not(:last-child), .completed-task:not(:last-child), .trash-task:not(:last-child) {
-   margin-bottom: 10px;
-}

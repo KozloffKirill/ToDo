@@ -13,6 +13,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { TasksEffects } from './store/tasks.effects';
 import { TaskBoardComponent } from './components/task-board/task-board.component';
 import { TaskComponent } from './components/task/task.component';
+import { TaskListComponent } from './components/task-list/task-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TaskComponent } from './components/task/task.component';
     NewTaskComponent,
     TasksComponent,
     TaskBoardComponent,
-    TaskComponent
+    TaskComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,

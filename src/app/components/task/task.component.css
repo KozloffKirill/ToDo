@@ -2,8 +2,8 @@
    display: block;
    padding: 8px 12px;
    background-color: white;
-   border-radius: 6px;
-   border-left: 6px solid #e0e0e0;
+   border-radius: 10px;
+   border-left: 6px solid;
 }
 
 .task-name {
@@ -17,4 +17,20 @@
    font-size: 18px;
    color: #4c4c4c;
    word-break: break-word;
+}
+
+:host-context(app-task-list .container.backlog) {
+   border-color: #e0e0e0;
+}
+
+:host-context(app-task-list .container.active) {
+   border-color: #d1e2fc
+}
+
+:host-context(app-task-list .container.completed) {
+   border-color: #d4f7d7;
+}
+
+:host-context(app-task-list .container.trash) {
+   border-color: #fbdfdc;
 }
