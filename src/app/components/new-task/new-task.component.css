@@ -1,3 +1,8 @@
+:host {
+   display: block;
+   margin-bottom: 35px;
+}
+
 .new-task {
    display: inline-block;
    padding: 22px 20px;

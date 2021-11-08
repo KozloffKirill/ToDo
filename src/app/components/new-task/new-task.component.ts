@@ -10,8 +10,8 @@ import { addTask } from 'src/app/store/tasks.actions';
 })
 export class NewTaskComponent implements OnInit {
 
-  taskName: string = '';
-  taskDescription: string = '';
+  public taskName: string = '';
+  public taskDescription: string = '';
 
   constructor(
     private _store: Store

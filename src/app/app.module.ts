@@ -11,13 +11,15 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import * as fromTasks from './store/tasks.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { TasksEffects } from './store/tasks.effects';
+import { TaskBoardComponent } from './components/task-board/task-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NewTaskComponent,
-    TasksComponent
+    TasksComponent,
+    TaskBoardComponent
   ],
   imports: [
     BrowserModule,

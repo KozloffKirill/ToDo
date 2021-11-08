@@ -1,0 +1,32 @@
+.flex-container {
+   display: flex;
+   justify-content: space-between;
+}
+
+.backlog-title, .active-title, .completed-title, .trash-title {
+   font-size: 20px;
+   padding: 7px 12px;
+   border-radius: 6px;
+}
+
+.backlog-title {
+   color: #8a8a8a;
+   background-color: #e0e0e0;
+}
+
+.active-title {
+   color: #4f8bd9;
+   background-color: #d1e2fc;
+}
+
+.completed-title {
+   color: #79b07e;
+   background-color: #d4f7d7;
+}
+
+.trash-title {
+   color: #b77579;
+   background-color: #fbdfdc;
+}
+
+.backlog-task, .active-task, .completed-task, .trash-task {}
