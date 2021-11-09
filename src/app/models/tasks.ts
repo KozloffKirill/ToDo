@@ -12,6 +12,7 @@ export enum PriorityType {
 }
 
 export interface ITask {
+   id: number,
    name: string,
    description: string,
    status: TaskType,

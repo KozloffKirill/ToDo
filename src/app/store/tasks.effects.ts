@@ -21,4 +21,13 @@ export class TasksEffects {
       );
    });
 
+   public deleteTasks$ = createEffect(() => {
+      return this._actions$.pipe(
+         ofType(TasksActions.deleteTasks),
+         concatMap((action) => {
+            return of(TasksActions.deleteTasksSuccess({ tasksIds: action.tasksIds }));
+         })
+      );
+   });
+
 }

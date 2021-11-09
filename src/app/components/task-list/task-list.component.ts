@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 import { ITask, TaskType } from 'src/app/models/tasks';
+import { deleteTasks } from 'src/app/store/tasks.actions';
 import { selectTypeTasks } from 'src/app/store/tasks.selectors';
 
 @Component({
@@ -28,6 +29,11 @@ export class TaskListComponent implements OnChanges, OnInit, OnDestroy {
   constructor(
     private _store: Store
   ) { }
+
+  public deleteTasks() {
+    const tasksIds: number[] = this.tasks.map((task) => task.id);
+    this._store.dispatch(deleteTasks({ tasksIds: tasksIds }))
+  }
 
   ngOnChanges(): void {
     this._tasks$ = this._store.select(selectTypeTasks(this.taskType))

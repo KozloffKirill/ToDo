@@ -5,9 +5,12 @@
    <p class="title">
       {{titles[taskType]}}
    </p>
-   <ul>
+   <ul [ngClass]="{'empty': taskType == 'Trash' && tasks.length == 0}">
       <li class="task" *ngFor="let task of tasks">
          <app-task [taskName]="task.name" [taskDescription]="task.description"></app-task>
       </li>
    </ul>
+   <button type="button" class="clear-btn" *ngIf="taskType == 'Trash'" [disabled]="tasks.length == 0" (click)="deleteTasks()"> 
+      <span>&#10006; Очистить</span>
+   </button>
 </div>

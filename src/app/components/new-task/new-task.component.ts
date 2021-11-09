@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { TasksHelper } from 'src/app/helpers/tasks.helper';
 import { ITask, TaskType } from 'src/app/models/tasks';
 import { addTask } from 'src/app/store/tasks.actions';
 
@@ -22,9 +23,10 @@ export class NewTaskComponent implements OnInit {
 
   public addTask(): void {
     const newTask: ITask = {
+      id: TasksHelper.getNewId(),
       name: this.taskName,
       description: this.taskDescription,
-      status: TaskType.Backlog
+      status: TaskType.Trash
     };
     this._store.dispatch(addTask({ task: newTask }));
 
