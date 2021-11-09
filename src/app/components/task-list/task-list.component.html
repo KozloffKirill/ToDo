@@ -6,9 +6,8 @@
       {{titles[taskType]}}
    </p>
    <ul>
-      <li class="task">
-         <app-task [taskName]="'Название задачи'" [taskDescription]="'Описание задачи описание задачи описание задачи'">
-         </app-task>
+      <li class="task" *ngFor="let task of tasks">
+         <app-task [taskName]="task.name" [taskDescription]="task.description"></app-task>
       </li>
    </ul>
 </div>
