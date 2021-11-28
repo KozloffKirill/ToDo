@@ -15,6 +15,7 @@ import { TaskBoardComponent } from './components/task-board/task-board.component
 import { TaskComponent } from './components/task/task.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { NewEmployeeComponent } from './components/new-employee/new-employee.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     TasksComponent,
     TaskBoardComponent,
     TaskComponent,
-    TaskListComponent
+    TaskListComponent,
+    NewEmployeeComponent
   ],
   imports: [
     BrowserModule,
