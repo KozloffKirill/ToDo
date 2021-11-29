@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
-import { TasksHelper } from "../helpers/tasks.helper";
-import { ITask, TaskType } from "../models/tasks";
+import { TasksHelper } from "../../helpers/tasks.helper";
+import { ITask, TaskType } from "../../models/tasks";
 import * as TasksActions from "./tasks.actions";
 
 export const tasksFeatureKey = 'tasks';

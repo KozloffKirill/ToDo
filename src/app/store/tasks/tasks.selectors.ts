@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { TaskType } from "../models/tasks";
+import { TaskType } from "../../models/tasks";
 import * as tasksReducer from "./tasks.reducer"
 
 const selectState = createFeatureSelector<tasksReducer.ITasksState>(

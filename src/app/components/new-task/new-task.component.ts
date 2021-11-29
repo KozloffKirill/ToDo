@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { TasksHelper } from 'src/app/helpers/tasks.helper';
 import { ITask, TaskType } from 'src/app/models/tasks';
-import { addTask } from 'src/app/store/tasks.actions';
+import { addTask } from 'src/app/store/tasks/tasks.actions';
 
 @Component({
   selector: 'app-new-task',
