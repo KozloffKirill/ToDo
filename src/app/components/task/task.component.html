@@ -1,2 +1,25 @@
-<p class="task-name">{{taskName}}</p>
-<p class="task-description">{{taskDescription}}</p>
+<div class="task-name">
+   <p>{{taskName}}</p>
+</div>
+<div class="task-description">
+   <p>{{taskDescription}}</p>
+</div>
+<div class="task-remaining-work">
+   <span>Оставшаяся работа: </span>
+   <p>0</p> 
+</div>
+<div class="task-priority">
+   <span>Приоритет:</span>
+   <select> 
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+   </select>
+</div>
+<div class="task-executor">
+   <span>Исполнитель:</span>
+   <select> 
+      <option selected>Кирилл</option>
+      <option *ngFor=""></option>
+   </select>
+</div>
