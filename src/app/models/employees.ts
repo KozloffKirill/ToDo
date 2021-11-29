@@ -1,4 +1,4 @@
-export enum EPosition {
+export enum Position {
    JuniorDeveloper = "Junior Developer",
    MiddleDeveloper = "Middle Developer",
    SeniorDeveloper = "Senior Developer",
@@ -9,5 +9,5 @@ export enum EPosition {
 
 export interface IEmployee {
    name: string,
-   position: EPosition
+   position: Position
 }
