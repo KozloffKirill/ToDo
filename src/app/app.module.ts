@@ -16,6 +16,7 @@ import { TaskBoardComponent } from './components/task-board/task-board.component
 import { TaskComponent } from './components/task/task.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { EmployeesEffects } from './store/employees/employees.effects';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     StoreModule.forFeature(fromTasks.tasksFeatureKey, fromTasks._tasksReducer),
     StoreModule.forFeature(fromEmployees.employeesFeatureKey, fromEmployees._employeesReducer),
-    EffectsModule.forRoot([TasksEffects])
+    EffectsModule.forRoot([TasksEffects, EmployeesEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

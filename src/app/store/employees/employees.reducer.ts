@@ -1,5 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
 import { IEmployee, Position } from "../../models/employees";
+import * as EmployeesActions from "./employees.actions"
 
 export const employeesFeatureKey = 'employees';
 
@@ -30,6 +31,13 @@ export const initialState: IEmployeesState = {
 
 export const _employeesReducer = createReducer(
    initialState,
+
+   on(EmployeesActions.addEmployeeSuccess, (state, employee) => (
+      {
+         ...state,
+         employees: [...state.employees, employee.employee]
+      }
+   )),
 
 );
 
