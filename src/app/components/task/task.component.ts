@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { ITask } from 'src/app/models/tasks';
 
 @Component({
   selector: 'app-task',
@@ -7,9 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TaskComponent implements OnInit {
 
-  @Input() public taskName!: String;
-  @Input() public taskDescription!: String;
+  @Input() public task!: ITask;
 
+  @HostListener("click") editTask() {
+
+  }
 
   constructor() { }
 
