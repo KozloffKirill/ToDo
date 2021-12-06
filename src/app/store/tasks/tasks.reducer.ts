@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
 import { TasksHelper } from "../../helpers/tasks.helper";
-import { ITask, TaskType } from "../../models/tasks";
+import { ITask, PriorityType, TaskType } from "../../models/tasks";
 import * as TasksActions from "./tasks.actions";
 
 export const tasksFeatureKey = 'tasks';
@@ -15,37 +15,55 @@ export const initialState: ITasksState = {
          id: TasksHelper.getNewId(),
          name: 'Купить домой очень большой пылесос',
          description: 'Мать сказала купить пылесос',
-         status: TaskType.Active
+         status: TaskType.Active,
+         priority: PriorityType.Low,
+         executor: 'Кирилл Козлов',
+         remainingWork: 10,
       },
       {
          id: TasksHelper.getNewId(),
          name: 'Покормить кота',
          description: 'Надо срочно покормить кота, он не ел много дней',
-         status: TaskType.Completed
+         status: TaskType.Completed,
+         priority: PriorityType.Low,
+         executor: 'Никита Кисляков',
+         remainingWork: 12,
       },
       {
          id: TasksHelper.getNewId(),
          name: 'Доделать курсовую работу',
          description: 'нада делать ыыыы',
-         status: TaskType.Active
+         status: TaskType.Active,
+         priority: PriorityType.Low,
+         executor: 'Слава Козлов',
+         remainingWork: 0,
       },
       {
          id: TasksHelper.getNewId(),
          name: 'Приготовить кашу',
          description: 'Надо приготовить овсяную кашу на завтрак',
-         status: TaskType.Backlog
+         status: TaskType.Backlog,
+         priority: PriorityType.Low,
+         executor: 'Кирилл Козлов',
+         remainingWork: 2,
       },
       {
          id: TasksHelper.getNewId(),
          name: 'Название задачи #5',
          description: 'Описание задачи описание задачи описание задачи описание задачи описание задачи',
-         status: TaskType.Backlog
+         status: TaskType.Backlog,
+         priority: PriorityType.Low,
+         executor: 'Кирилл Козлов',
+         remainingWork: 5,
       },
       {
          id: TasksHelper.getNewId(),
          name: 'Помогите',
          description: 'Меня держат здесь взаперти',
-         status: TaskType.Active
+         status: TaskType.Active,
+         priority: PriorityType.Low,
+         executor: 'Илья Загладкин',
+         remainingWork: 1,
       },
    ]
 }
