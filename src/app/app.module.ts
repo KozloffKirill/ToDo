@@ -17,6 +17,7 @@ import { TaskComponent } from './components/task/task.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EmployeesEffects } from './store/employees/employees.effects';
+import { TaskEditorComponent } from './components/task-editor/task-editor.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EmployeesEffects } from './store/employees/employees.effects';
     TasksComponent,
     TaskBoardComponent,
     TaskComponent,
-    TaskListComponent
+    TaskListComponent,
+    TaskEditorComponent
   ],
   imports: [
     BrowserModule,
