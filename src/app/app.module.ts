@@ -18,6 +18,7 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EmployeesEffects } from './store/employees/employees.effects';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     StoreModule.forFeature(fromTasks.tasksFeatureKey, fromTasks._tasksReducer),
     StoreModule.forFeature(fromEmployees.employeesFeatureKey, fromEmployees._employeesReducer),
     EffectsModule.forRoot([TasksEffects, EmployeesEffects]),
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
