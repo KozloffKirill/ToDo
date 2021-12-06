@@ -36,7 +36,7 @@ export class TaskListComponent implements OnChanges, OnInit, OnDestroy {
   }
 
   ngOnChanges(): void {
-    this._tasks$ = this._store.select(selectTypeTasks(this.taskType))
+    this._tasks$ = this._store.select(selectTypeTasks(this.taskType));
   }
 
   ngOnInit(): void {

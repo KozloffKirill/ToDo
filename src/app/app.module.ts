@@ -19,6 +19,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { EmployeesEffects } from './store/employees/employees.effects';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
+import { TaskEditorComponent } from './components/task-editor/task-editor.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     TasksComponent,
     TaskBoardComponent,
     TaskComponent,
-    TaskListComponent
+    TaskListComponent,
+    TaskEditorComponent
   ],
   imports: [
     BrowserModule,
