@@ -1,0 +1,59 @@
+:host {
+   display: block;
+   margin-bottom: 35px;
+}
+
+.new-employee {
+   display: inline-block;
+   padding: 22px 20px;
+   background-color: white;
+   border-radius: 15px;
+}
+
+.title {
+   margin-bottom: 14px;
+   font-size: 26px;
+   color: #2d2d2d;
+}
+
+.add-button {
+   padding: 9px 18px;
+   margin-top: auto;
+   background-color: #2875eb;
+   border: none;
+   border-radius: 6px;
+   transition: opacity 0.2s linear;
+}
+
+.add-button:hover:not(:disabled) {
+   opacity: 0.8;
+}
+
+.add-button:disabled {
+   background-color: #8ca6cc;
+}
+
+.add-button span {
+   color: white;
+}
+
+.name-input {
+   margin-bottom: 8px;
+}
+
+.name-input {
+   padding: 8px 10px;
+   border: none;
+   border: 2px solid #dedede;
+   border-radius: 6px;
+}
+
+.flex-container {
+   display: flex;
+}
+
+.inputs {
+   display: flex;
+   flex-direction: column;
+   margin-right: 15px;
+}

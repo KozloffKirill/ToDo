@@ -21,6 +21,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { TaskEditorComponent } from './components/task-editor/task-editor.component';
 import { TeamComponent } from './components/team/team.component';
+import { NewEmployeeComponent } from './components/new-employee/new-employee.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TeamComponent } from './components/team/team.component';
     TaskComponent,
     TaskListComponent,
     TaskEditorComponent,
-    TeamComponent
+    TeamComponent,
+    NewEmployeeComponent
   ],
   imports: [
     BrowserModule,
