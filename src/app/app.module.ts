@@ -20,6 +20,7 @@ import { EmployeesEffects } from './store/employees/employees.effects';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { TaskEditorComponent } from './components/task-editor/task-editor.component';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TaskEditorComponent } from './components/task-editor/task-editor.compon
     TaskBoardComponent,
     TaskComponent,
     TaskListComponent,
-    TaskEditorComponent
+    TaskEditorComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
