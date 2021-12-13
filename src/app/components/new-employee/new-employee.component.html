@@ -1,7 +1,12 @@
 <div class="new-employee">
    <p class="title">Новый сотрудник</p>
    <div class="flex-container">
-      <input type="text" class="name-input" required placeholder="ФИО сотрудника..." [(ngModel)]="employeeName">
+      <div class="inputs">
+         <input type="text" class="name-input" required placeholder="ФИО сотрудника..." [(ngModel)]="employeeName">
+         <select class="position" [(ngModel)]="employeePosition">
+            <option *ngFor="let position of positions" [ngValue]="position">{{position}}</option>
+         </select>
+      </div>
       <button class="add-button" [disabled]="employeeName == ''" (click)="addEmployee()">
          <span>&#43; Добавить</span>
       </button>
