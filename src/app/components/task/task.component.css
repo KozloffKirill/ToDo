@@ -23,60 +23,11 @@
    word-break: break-word;
 }
 
-.task-priority {
-   display: flex;
-   align-items: center;
-   margin-bottom: 5px;
-   font-size: 18px;
-   color: #4c4c4c;
-}
-
-.task-priority span {
-   margin-right: 5px;
-}
-
-.task-priority select {
-   flex-grow: 1;
-   color: #4c4c4c;
-   border: 1px solid white;
-   appearance: none;
-}
-
-.task-priority select:hover {
-   border: 1px solid #e0e0e0;
-}
-
-.task-remaining-work {
-   display: flex;
-   margin-bottom: 5px;
-   font-size: 18px;
-   color: #4c4c4c;
-}
-
-.task-remaining-work span {
-   margin-right: 5px;
-}
-
 .task-executor {
    display: flex;
-   align-items: center;
-   font-size: 18px;
+   justify-content: flex-end;
+   font-size: 16px;
    color: #4c4c4c;
-}
-
-.task-executor span {
-   margin-right: 5px;
-}
-
-.task-executor select {
-   flex-grow: 1;
-   color: #4c4c4c;
-   border: 1px solid white;
-   appearance: none;
-}
-
-.task-executor select:hover {
-   border: 1px solid #e0e0e0;
 }
 
 :host-context(app-task-list .container.backlog) {

@@ -1,2 +1,5 @@
 <p class="task-name">{{task.name}}</p>
 <p class="task-description">{{task.description}}</p>
+<div class="task-executor" *ngIf="task.executor">
+   <p>{{task.executor}}</p>
+</div>
