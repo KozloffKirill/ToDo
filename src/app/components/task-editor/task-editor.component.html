@@ -5,7 +5,7 @@
    <div class="flex-container">
       <div class="task-description">
          <p>Описание</p>
-         <textarea placeholder="Описание задачи..." rows="5" cols="25" formControlName="taskDescription"></textarea>
+         <textarea placeholder="Описание задачи..." rows="5" cols="25" formControlName="taskDescription" [ngClass]="{'danger-warning': taskEditForm.controls['taskDescription'].invalid}"></textarea>
       </div>
       <div class="summary">
          <p class="title">Сведения</p>
@@ -32,7 +32,7 @@
       <button mat-dialog-close class="close-button">
          <span>Закрыть</span>
       </button>
-      <button class="edit-button" (click)="editTask()" [disabled]="!taskEditForm.dirty || taskEditForm.controls['taskName'].invalid">
+      <button class="edit-button" (click)="editTask()" [disabled]="!taskEditForm.dirty || taskEditForm.controls['taskName'].invalid || taskEditForm.controls['taskDescription'].invalid">
          <span>Сохранить</span>
       </button>
    </div>

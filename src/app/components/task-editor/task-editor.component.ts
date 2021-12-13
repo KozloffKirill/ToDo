@@ -24,7 +24,7 @@ export class TaskEditorComponent implements OnInit, OnDestroy {
 
   public taskEditForm: FormGroup = new FormGroup({
     "taskName": new FormControl(this.task.name, [Validators.required, Validators.maxLength(40)]),
-    "taskDescription": new FormControl(this.task.description),
+    "taskDescription": new FormControl(this.task.description, Validators.required),
     "taskExecutor": new FormControl(this.task.executor),
     "taskPriority": new FormControl(this.task.priority),
     "taskRemainingWork": new FormControl(this.task.remainingWork)
