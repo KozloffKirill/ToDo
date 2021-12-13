@@ -30,4 +30,13 @@ export class TasksEffects {
       );
    });
 
+   public editTask$ = createEffect(() => {
+      return this._actions$.pipe(
+         ofType(TasksActions.editTask),
+         concatMap((action) => {
+            return of(TasksActions.editTaskSuccess({ task: action.task }));
+         })
+      );
+   });
+
 }

@@ -1,24 +1,39 @@
-<div class="column-1">
+<form [formGroup]="taskEditForm">
    <div class="task-name">
-      <p>{{task.name}}</p>
+      <input type="text" placeholder="Название задачи..." formControlName="taskName" [ngClass]="{'danger-warning': taskEditForm.controls['taskName'].invalid}">
    </div>
-   <div class="task-description">
-      <p>Описание</p>
-      <textarea placeholder="Краткое описание задачи..." rows="10">{{task.description}}</textarea>
+   <div class="flex-container">
+      <div class="task-description">
+         <p>Описание</p>
+         <textarea placeholder="Описание задачи..." rows="5" cols="25" formControlName="taskDescription"></textarea>
+      </div>
+      <div class="summary">
+         <p class="title">Сведения</p>
+         <div class="task-executor">
+            <p>Исполнитель:</p>
+            <select formControlName="taskExecutor">
+               <option value="null">Не назначен</option>
+               <option *ngFor="let employee of employees" [ngValue]="employee.name">{{employee.name}}</option>
+            </select>
+         </div>
+         <div class="task-priority">
+            <p>Приоритет:</p>
+            <select formControlName="taskPriority">
+               <option *ngFor="let priority of priorities" [ngValue]="priority">{{priority}}</option>
+            </select>
+         </div>
+         <div class="task-remaining-work">
+            <p>Время работы (в часах):</p>
+            <input type="number" min="0" formControlName="taskRemainingWork">
+         </div>
+      </div>
    </div>
-</div>
-<div class="column-2">
-   Сведения: 
-   <div class="task-priority">
-      <p>Приоритет: </p>
-      {{task.priority}}
+   <div class="container">
+      <button mat-dialog-close class="close-button">
+         <span>Закрыть</span>
+      </button>
+      <button class="edit-button" (click)="editTask()" [disabled]="!taskEditForm.dirty || taskEditForm.controls['taskName'].invalid">
+         <span>Сохранить</span>
+      </button>
    </div>
-   <div class="task-remainingWork">
-      <p>Оставшаяся работа (в часах): </p>
-      {{task.remainingWork}}
-   </div>
-   <div class="task-executor">
-      <p>Исполнитель: </p>
-      {{task.executor}}
-   </div>
-</div>
+<form>

@@ -17,7 +17,7 @@ export const initialState: ITasksState = {
          description: 'Мать сказала купить пылесос',
          status: TaskType.Active,
          priority: PriorityType.Low,
-         executor: 'Кирилл Козлов',
+         executor: 'Козлов Кирилл',
          remainingWork: 10,
       },
       {
@@ -25,8 +25,8 @@ export const initialState: ITasksState = {
          name: 'Покормить кота',
          description: 'Надо срочно покормить кота, он не ел много дней',
          status: TaskType.Completed,
-         priority: PriorityType.Low,
-         executor: 'Никита Кисляков',
+         priority: PriorityType.Medium,
+         executor: 'Кисляков Никита',
          remainingWork: 12,
       },
       {
@@ -34,8 +34,8 @@ export const initialState: ITasksState = {
          name: 'Доделать курсовую работу',
          description: 'нада делать ыыыы',
          status: TaskType.Active,
-         priority: PriorityType.Low,
-         executor: 'Слава Козлов',
+         priority: PriorityType.High,
+         executor: 'Козлов Вячеслав',
          remainingWork: 0,
       },
       {
@@ -44,7 +44,7 @@ export const initialState: ITasksState = {
          description: 'Надо приготовить овсяную кашу на завтрак',
          status: TaskType.Backlog,
          priority: PriorityType.Low,
-         executor: 'Кирилл Козлов',
+         executor: 'Козлов Кирилл',
          remainingWork: 2,
       },
       {
@@ -52,8 +52,8 @@ export const initialState: ITasksState = {
          name: 'Название задачи #5',
          description: 'Описание задачи описание задачи описание задачи описание задачи описание задачи',
          status: TaskType.Backlog,
-         priority: PriorityType.Low,
-         executor: 'Кирилл Козлов',
+         priority: PriorityType.High,
+         executor: 'Козлов Кирилл',
          remainingWork: 5,
       },
       {
@@ -62,7 +62,7 @@ export const initialState: ITasksState = {
          description: 'Меня держат здесь взаперти',
          status: TaskType.Active,
          priority: PriorityType.Low,
-         executor: 'Илья Загладкин',
+         executor: 'Загладкин Илья',
          remainingWork: 1,
       },
    ]
@@ -83,6 +83,17 @@ export const _tasksReducer = createReducer(
          ...state,
          tasks: state.tasks.filter((task) => {
             return tasksIds.tasksIds.indexOf(task.id) == -1;
+         })
+      }
+   )),
+
+   on(TasksActions.editTaskSuccess, (state, task) => (
+      {
+         ...state,
+         tasks: state.tasks.map((item) => {
+            if (item.id == task.task.id) {
+               return task.task;
+            } else return item;
          })
       }
    )),
