@@ -3,9 +3,9 @@
    <div class="flex-container">
       <div class="inputs">
          <input type="text" class="name-input" required placeholder="Название задачи..." [(ngModel)]="taskName">
-         <input type="text" class="description-input" placeholder="Описание задачи..." [(ngModel)]="taskDescription">
+         <input type="text" class="description-input" required placeholder="Описание задачи..." [(ngModel)]="taskDescription">
       </div>
-      <button class="add-button" [disabled]="taskName == '' || taskDescription == ''" (click)="addTask()">
+      <button class="add-button" [disabled]="taskName == '' || taskName.length > 40 || taskDescription == ''" (click)="addTask()">
          <span>&#43; Добавить</span>
       </button>
    </div>
