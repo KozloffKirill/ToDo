@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { TaskType } from "../models/tasks";
+import { TaskType } from "../../models/tasks";
 import * as tasksReducer from "./tasks.reducer"
 
 const selectState = createFeatureSelector<tasksReducer.ITasksState>(
@@ -15,4 +15,10 @@ export const selectTypeTasks = (type: TaskType) =>
    createSelector(
       selectState,
       (state: tasksReducer.ITasksState) => state.tasks.filter((task) => task.status == type)
+   );
+
+export const selectTask = (id: number) =>
+   createSelector(
+      selectState,
+      (state: tasksReducer.ITasksState) => state.tasks.find((task) => task.id == id)
    );

@@ -1,0 +1,25 @@
+:host {
+   display: flex;
+   justify-content: space-around;
+   width: 600px;
+   border-radius: 10px;
+   padding: 20px;
+   background-color: white;
+}
+
+.task-name {
+   margin-bottom: 20px;
+   font-size: 20px;
+   font-weight: 700;
+   color: #4c4c4c;
+   word-break: break-word;
+}
+
+.task-description {
+   font-size: 18px;
+   color: #4c4c4c;
+   word-break: break-word;
+}
+
+
+

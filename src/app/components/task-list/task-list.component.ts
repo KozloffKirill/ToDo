@@ -2,8 +2,8 @@ import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 import { ITask, TaskType } from 'src/app/models/tasks';
-import { deleteTasks } from 'src/app/store/tasks.actions';
-import { selectTypeTasks } from 'src/app/store/tasks.selectors';
+import { deleteTasks } from 'src/app/store/tasks/tasks.actions';
+import { selectTypeTasks } from 'src/app/store/tasks/tasks.selectors';
 
 @Component({
   selector: 'app-task-list',
@@ -36,7 +36,7 @@ export class TaskListComponent implements OnChanges, OnInit, OnDestroy {
   }
 
   ngOnChanges(): void {
-    this._tasks$ = this._store.select(selectTypeTasks(this.taskType))
+    this._tasks$ = this._store.select(selectTypeTasks(this.taskType));
   }
 
   ngOnInit(): void {
