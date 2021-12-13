@@ -1,0 +1,11 @@
+.flex-container {
+   display: flex;
+}
+
+.task-board>li {
+   width: 100%;
+}
+
+.task-board>li:not(:last-child) {
+   margin-right: 30px;
+}

@@ -1,0 +1,51 @@
+:host {
+   display: block;
+   padding: 8px 12px;
+   background-color: white;
+   border-radius: 10px;
+   border-left: 6px solid;
+   transition: background-color 0.1s linear;
+   cursor: pointer;
+}
+
+.task-name {
+   margin-bottom: 5px;
+   font-size: 20px;
+   font-weight: 700;
+   color: #4c4c4c;
+   word-break: break-word;
+}
+
+.task-description {
+   font-size: 18px;
+   color: #4c4c4c;
+   word-break: break-word;
+}
+
+:host-context(app-task-list .container.backlog) {
+   border-color: #e0e0e0;
+}
+:host-context(app-task-list .container.backlog):hover {
+   background-color: #e0e0e0;
+}
+
+:host-context(app-task-list .container.active) {
+   border-color: #d1e2fc
+}
+:host-context(app-task-list .container.active):hover {
+   background-color: #d1e2fc;
+}
+
+:host-context(app-task-list .container.completed) {
+   border-color: #d4f7d7;
+}
+:host-context(app-task-list .container.completed):hover {
+   background-color: #d4f7d7;
+}
+
+:host-context(app-task-list .container.trash) {
+   border-color: #fbdfdc;
+}
+:host-context(app-task-list .container.trash):hover {
+   background-color: #fbdfdc;
+}

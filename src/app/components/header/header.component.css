@@ -1,17 +1,27 @@
 :host {
    display: block;
-
-   padding: 15px 0px;
-
+   padding: 5px 0px;
+   margin-bottom: 40px;
    background-color: #2675eb;
 }
 
 .wrapper {
-   max-width: 1060px;
+   max-width: 1200px;
    margin: auto;
+}
+
+.flex-container {
+   display: flex;
+   align-items: center;
+}
+
+.main-header {
+   margin-right: 20px;
+   width: 64px;
+   height: 64px;
 }
 
 .title {
    color: white;
-   font-size: 32px;
+   font-size: 36px;
 }

@@ -1,0 +1,14 @@
+<ul class="task-board flex-container">
+   <li>
+      <app-task-list [taskType]="taskType.Backlog"></app-task-list>
+   </li>
+   <li>
+      <app-task-list [taskType]="taskType.Active"></app-task-list>
+   </li>
+   <li>
+      <app-task-list [taskType]="taskType.Completed"></app-task-list>
+   </li>
+   <li>
+      <app-task-list [taskType]="taskType.Trash"></app-task-list>
+   </li>
+</ul>

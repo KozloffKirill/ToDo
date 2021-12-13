@@ -1,22 +1,22 @@
 import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
-import * as TasksActions from "./tasks.actions";
+import * as EmployeesActions from "./employees.actions";
 import { concatMap } from 'rxjs/operators';
 import { of } from "rxjs";
 
 @Injectable()
-export class TasksEffects {
+export class EmployeesEffects {
    constructor(
       private _actions$: Actions,
    ) {
 
    }
 
-   public addTask$ = createEffect(() => {
+   public addEmployee$ = createEffect(() => {
       return this._actions$.pipe(
-         ofType(TasksActions.addTask),
+         ofType(EmployeesActions.addEmployee),
          concatMap((action) => {
-            return of(TasksActions.addTaskSuccess({ task: action.task }));
+            return of(EmployeesActions.addEmployeeSuccess({ employee: action.employee }));
          })
       );
    });

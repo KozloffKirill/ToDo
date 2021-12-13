@@ -1,0 +1,24 @@
+<div class="column-1">
+   <div class="task-name">
+      <p>{{task.name}}</p>
+   </div>
+   <div class="task-description">
+      <p>Описание</p>
+      <textarea placeholder="Краткое описание задачи..." rows="10">{{task.description}}</textarea>
+   </div>
+</div>
+<div class="column-2">
+   Сведения: 
+   <div class="task-priority">
+      <p>Приоритет: </p>
+      {{task.priority}}
+   </div>
+   <div class="task-remainingWork">
+      <p>Оставшаяся работа (в часах): </p>
+      {{task.remainingWork}}
+   </div>
+   <div class="task-executor">
+      <p>Исполнитель: </p>
+      {{task.executor}}
+   </div>
+</div>

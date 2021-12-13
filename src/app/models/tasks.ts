@@ -6,14 +6,17 @@ export enum TaskType {
 }
 
 export enum PriorityType {
-   Low,
-   Medium,
-   High
+   Low = "Low",
+   Medium = "Medium",
+   High = "High"
 }
 
 export interface ITask {
+   id: number,
    name: string,
    description: string,
    status: TaskType,
    priority?: PriorityType,
+   executor?: string,
+   remainingWork?: number,
 }

@@ -1,0 +1,63 @@
+.container .title {
+   display: inline-block;
+   margin-bottom: 20px;
+   padding: 7px 12px;
+   font-size: 20px;
+   border-radius: 6px;
+}
+
+.container.backlog .title {
+   color: #8a8a8a;
+   background-color: #e0e0e0;
+}
+
+.container.active .title {
+   color: #4f8bd9;
+   background-color: #d1e2fc;
+}
+
+.container.completed .title {
+   color: #79b07e;
+   background-color: #d4f7d7;
+}
+
+.container.trash .title {
+   color: #b77579;
+   background-color: #fbdfdc;
+}
+
+.task:not(:last-child) {
+   margin-bottom: 10px;
+}
+
+.clear-btn {
+   background-color: #c25a5f;
+   color: white;
+   padding: 9px 18px;
+   margin-top: 20px;
+   border: none;
+   border-radius: 6px;
+   transition: opacity 0.2s linear;
+   width: 100%;
+}
+
+.clear-btn:hover:not(:disabled) {
+   opacity: 0.8;
+}
+
+.clear-btn:disabled {
+   background-color: #ccb2b3;
+}
+
+.empty::after {
+   content: 'Корзина пуста';
+   font-size: 18px;
+   display: flex;
+   align-items: center;
+   padding: 8px 12px;
+   height: 45px;
+   border: 2px dashed grey;
+   color: grey;
+   border-radius: 10px;
+   width: inherit;
+}
