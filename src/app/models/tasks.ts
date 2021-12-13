@@ -16,7 +16,7 @@ export interface ITask {
    name: string,
    description: string,
    status: TaskType,
-   priority?: PriorityType,
-   executor?: string,
-   remainingWork?: number,
+   priority: PriorityType,
+   executor: string | null,
+   remainingWork: number,
 }

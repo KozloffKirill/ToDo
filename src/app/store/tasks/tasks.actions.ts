@@ -12,11 +12,21 @@ export const addTaskSuccess = createAction(
 );
 
 export const deleteTasks = createAction(
-   '[Tasks] Delete Task',
+   '[Tasks] Delete Tasks',
    props<{ tasksIds: number[] }>()
 );
 
 export const deleteTasksSuccess = createAction(
-   '[Tasks] Delete Task Success',
+   '[Tasks] Delete Tasks Success',
    props<{ tasksIds: number[] }>()
+);
+
+export const editTask = createAction(
+   '[Tasks] Edit Task',
+   props<{ task: ITask }>()
+);
+
+export const editTaskSuccess = createAction(
+   '[Tasks] Edit Task Success',
+   props<{ task: ITask }>()
 );

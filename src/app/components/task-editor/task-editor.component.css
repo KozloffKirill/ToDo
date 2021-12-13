@@ -1,25 +1,189 @@
 :host {
-   display: flex;
-   justify-content: space-around;
-   width: 600px;
+   display: inline-block;
    border-radius: 10px;
    padding: 20px;
    background-color: white;
 }
 
 .task-name {
-   margin-bottom: 20px;
+   margin-bottom: 10px;
+}
+
+.task-name input {
+   border: none;
+   box-sizing: border-box;
+   width: 100%;
+   padding: 3px 5px 3px 3px;
    font-size: 20px;
    font-weight: 700;
    color: #4c4c4c;
-   word-break: break-word;
+   transition: background-color 0.1s linear;
+}
+
+.task-name input:hover {
+   background-color: #e0e0e0;
+}
+
+.task-name input:focus {
+   box-shadow: inset 0 0 0 1px #d1e2fc;
+   background-color: white;
+}
+
+.flex-container {
+   display: flex;
+   margin-bottom: 15px;
 }
 
 .task-description {
-   font-size: 18px;
-   color: #4c4c4c;
-   word-break: break-word;
+   margin-right: 10px;
 }
 
+.task-description p {
+   font-size: 16px;
+   color: #4c4c4c;
+   margin-bottom: 3px;
+}
 
+.task-description textarea {
+   border: none;
+   box-sizing: border-box;
+   padding: 3px 5px 3px 3px;
+   font-size: 18px;
+   color: #4c4c4c;
+   resize: none;
+   transition: background-color 0.1s linear;
+}
 
+.task-description textarea:hover {
+   background-color: #e0e0e0;
+}
+
+.task-description textarea:focus {
+   box-shadow: inset 0 0 0 1px #d1e2fc;
+   background-color: white;
+}
+
+.summary .title {
+   font-size: 16px;
+   color: #4c4c4c;
+   margin-bottom: 3px;
+}
+
+.task-executor {
+   display: flex;
+   align-items: center;
+}
+
+.task-executor p {
+   font-size: 14px;
+   color: #4c4c4c;
+   margin-right: 10px;
+}
+
+.task-executor select {
+   flex-grow: 1;
+   padding: 3px 5px 3px 3px;
+   border: none;
+   appearance: none;
+   transition: background-color 0.1s linear;
+}
+
+.task-executor select:hover {
+   background-color: #e0e0e0;
+}
+
+.task-executor select:focus {
+   box-shadow: inset 0 0 0 1px #d1e2fc;
+   background-color: white;
+}
+
+.task-priority {
+   display: flex;
+   align-items: center;
+}
+
+.task-priority p {
+   font-size: 14px;
+   color: #4c4c4c;
+   margin-right: 10px;
+}
+
+.task-priority select {
+   flex-grow: 1;
+   padding: 3px 5px 3px 3px;
+   border: none;
+   appearance: none;
+   transition: background-color 0.1s linear;
+}
+
+.task-priority select:hover {
+   background-color: #e0e0e0;
+}
+
+.task-priority select:focus {
+   box-shadow: inset 0 0 0 1px #d1e2fc;
+   background-color: white;
+}
+
+.task-remaining-work {
+   display: flex;
+   align-items: center;
+}
+
+.task-remaining-work p {
+   font-size: 14px;
+   color: #4c4c4c;
+   margin-right: 10px;
+}
+
+.task-remaining-work input {
+   width: 50px;
+   flex-grow: 1;
+   padding: 3px 5px 3px 3px;
+   border: none;
+   appearance: none;
+   transition: background-color 0.1s linear;
+}
+
+.task-remaining-work input:hover {
+   background-color: #e0e0e0;
+}
+
+.task-remaining-work input:focus {
+   box-shadow: inset 0 0 0 1px #d1e2fc;
+   background-color: white;
+}
+
+.container {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+}
+
+.edit-button, .close-button {
+   padding: 9px 18px;
+   background-color: #2875eb;
+   border: none;
+   border-radius: 6px;
+   transition: opacity 0.2s linear;
+}
+
+.edit-button:not(:disabled):hover, .close-button:hover {
+   opacity: 0.8;
+}
+
+.edit-button span, .close-button span {
+   color: white;
+}
+
+.edit-button:disabled {
+   background-color: #8ca6cc;
+}
+
+.close-button {
+   margin-right: 10px;
+}
+
+.danger-warning {
+   box-shadow: inset 0 0 0 1px red !important;
+}
