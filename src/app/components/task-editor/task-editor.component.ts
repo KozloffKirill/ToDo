@@ -48,7 +48,7 @@ export class TaskEditorComponent implements OnInit, OnDestroy {
       ...this.task,
       name: this.taskEditForm.controls["taskName"].value,
       description: this.taskEditForm.controls["taskDescription"].value,
-      executor: this.taskEditForm.controls["taskExecutor"].value,
+      executor: this.taskEditForm.controls["taskExecutor"].value == 'null' ? null: this.taskEditForm.controls["taskExecutor"].value,
       priority: this.taskEditForm.controls["taskPriority"].value,
       remainingWork: this.taskEditForm.controls["taskRemainingWork"].value,
     } }));

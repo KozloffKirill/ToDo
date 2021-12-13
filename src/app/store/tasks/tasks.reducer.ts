@@ -17,7 +17,7 @@ export const initialState: ITasksState = {
          description: 'Мать сказала купить пылесос',
          status: TaskType.Active,
          priority: PriorityType.Low,
-         executor: 'Козлов Кирилл',
+         executor: null,
          remainingWork: 10,
       },
       {
@@ -44,7 +44,7 @@ export const initialState: ITasksState = {
          description: 'Надо приготовить овсяную кашу на завтрак',
          status: TaskType.Backlog,
          priority: PriorityType.Low,
-         executor: 'Козлов Кирилл',
+         executor: null,
          remainingWork: 2,
       },
       {
