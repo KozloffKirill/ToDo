@@ -22,6 +22,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { TaskEditorComponent } from './components/task-editor/task-editor.component';
 import { TeamComponent } from './components/team/team.component';
 import { NewEmployeeComponent } from './components/new-employee/new-employee.component';
+import { EmployeeCardComponent } from './components/employee-card/employee-card.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NewEmployeeComponent } from './components/new-employee/new-employee.com
     TaskListComponent,
     TaskEditorComponent,
     TeamComponent,
-    NewEmployeeComponent
+    NewEmployeeComponent,
+    EmployeeCardComponent
   ],
   imports: [
     BrowserModule,

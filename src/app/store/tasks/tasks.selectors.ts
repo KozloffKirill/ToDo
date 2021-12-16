@@ -22,3 +22,13 @@ export const selectTask = (id: number) =>
       selectState,
       (state: tasksReducer.ITasksState) => state.tasks.find((task) => task.id == id)
    );
+
+export const selectEmployeeWorkload = (employeeName: string) =>
+   createSelector(
+      selectState,
+      (state: tasksReducer.ITasksState) => {
+         let workload: number = 0;
+         state.tasks.filter((task) => task.executor == employeeName).forEach((task) => workload += task.remainingWork);
+         return workload;
+      }
+   );
