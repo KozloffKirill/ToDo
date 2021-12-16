@@ -23,6 +23,7 @@ import { TaskEditorComponent } from './components/task-editor/task-editor.compon
 import { TeamComponent } from './components/team/team.component';
 import { NewEmployeeComponent } from './components/new-employee/new-employee.component';
 import { EmployeeCardComponent } from './components/employee-card/employee-card.component';
+import { EmployeeBoardComponent } from './components/employee-board/employee-board.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EmployeeCardComponent } from './components/employee-card/employee-card.
     TaskEditorComponent,
     TeamComponent,
     NewEmployeeComponent,
-    EmployeeCardComponent
+    EmployeeCardComponent,
+    EmployeeBoardComponent
   ],
   imports: [
     BrowserModule,

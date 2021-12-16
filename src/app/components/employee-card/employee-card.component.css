@@ -1,12 +1,16 @@
 :host {
    display: inline-block;
+   width: 280px;
+   box-sizing: border-box;
    padding: 10px 20px;
    background-color: white;
    border-radius: 10px;
+   margin-bottom: 20px;
 }
 
 .avatar {
    margin-bottom: 20px;
+   text-align: center;
 }
 
 .avatar img {
@@ -16,4 +20,15 @@
 
 .name, .position {
    margin-bottom: 10px;
+}
+
+.name {
+   font-size: 20px;
+   font-weight: 700;
+   color: #4c4c4c;
+}
+
+.position, .workload {
+   font-size: 18px;
+   color: #4c4c4c;
 }
