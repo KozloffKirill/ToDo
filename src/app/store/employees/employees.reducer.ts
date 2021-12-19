@@ -1,4 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
+import { EmployeesHelper } from "src/app/helpers/employees.helper";
 import { IEmployee, Position } from "../../models/employees";
 import * as EmployeesActions from "./employees.actions"
 
@@ -11,18 +12,22 @@ export interface IEmployeesState {
 export const initialState: IEmployeesState = {
    employees: [
       {
+         id: EmployeesHelper.getNewId(),
          name: "Козлов Кирилл",
          position: Position.JuniorDeveloper
       },
       {
+         id: EmployeesHelper.getNewId(),
          name: "Загладкин Илья",
          position: Position.Tester
       },
       {
+         id: EmployeesHelper.getNewId(),
          name: "Кисляков Никита",
          position: Position.ProjectManager
       },
       {
+         id: EmployeesHelper.getNewId(),
          name: "Козлов Вячеслав",
          position: Position.Analyst
       },
@@ -36,6 +41,15 @@ export const _employeesReducer = createReducer(
       {
          ...state,
          employees: [...state.employees, employee.employee]
+      }
+   )),
+
+   on(EmployeesActions.deleteEmployeeSuccess, (state, employeeId) => (
+      {
+         ...state,
+         employees: state.employees.filter((employee) => {
+            return employee.id != employeeId.employeeId
+         })
       }
    )),
 

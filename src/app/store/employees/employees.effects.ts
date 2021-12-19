@@ -21,4 +21,13 @@ export class EmployeesEffects {
       );
    });
 
+   public deleteEmployee$ = createEffect(() => {
+      return this._actions$.pipe(
+         ofType(EmployeesActions.deleteEmployee),
+         concatMap((action) => {
+            return of(EmployeesActions.deleteEmployeeSuccess({ employeeId: action.employee.id }));
+         })
+      );
+   });
+
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { EmployeesHelper } from 'src/app/helpers/employees.helper';
 import { IEmployee, Position } from 'src/app/models/employees';
 import { addEmployee } from 'src/app/store/employees/employees.actions';
 
@@ -56,6 +57,7 @@ export class NewEmployeeComponent implements OnInit {
         break;
     }
     const newEmployee: IEmployee = {
+      id: EmployeesHelper.getNewId(),
       name: this.employeeName,
       position: position
     }

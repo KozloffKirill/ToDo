@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { IEmployee } from 'src/app/models/employees';
+import { deleteEmployee } from 'src/app/store/employees/employees.actions';
 import { selectEmployeeWorkload } from 'src/app/store/tasks/tasks.selectors';
 
 @Component({
@@ -33,6 +34,10 @@ export class EmployeeCardComponent implements OnInit, OnChanges, OnDestroy {
 
   ngOnDestroy(): void {
     this._sub.unsubscribe();
+  }
+
+  public deleteEmployee() {
+    this._store.dispatch(deleteEmployee({ employee: this.employee }));
   }
 
 }

@@ -12,11 +12,24 @@
 .avatar {
    margin-bottom: 20px;
    text-align: center;
+   position: relative;
 }
 
 .avatar img {
    border-radius: 100%;
    width: 100px;
+}
+
+.delete {
+   position: absolute;
+   right: 0;
+   background-color: transparent;
+   border: none;
+}
+
+.delete span {
+   font-size: 20px;
+   color: #c25a5f
 }
 
 .name, .position {
