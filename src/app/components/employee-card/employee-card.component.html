@@ -1,6 +1,6 @@
 <div class="avatar">
    <img src="../../../assets/img/avatar.png">
-   <button class="delete" (click)="deleteEmployee()"> 
+   <button class="delete" (click)="deleteEmployee()" *ngIf="user.role == 'Admin'"> 
       <span>&#10006;</span>
    </button>
 </div>

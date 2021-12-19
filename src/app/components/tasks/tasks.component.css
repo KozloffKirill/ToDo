@@ -7,3 +7,8 @@
    max-width: 1200px;
    margin: auto;
 }
+
+p {
+   color: #4c4c4c;
+   font-size: 36px;
+}

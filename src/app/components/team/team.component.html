@@ -1,4 +1,4 @@
 <div class="wrapper">
-   <app-new-employee></app-new-employee>
-   <app-employee-board></app-employee-board>
+   <app-new-employee *ngIf="user.role == 'Admin'"></app-new-employee>
+   <app-employee-board *ngIf="user.role != 'Anonym'"></app-employee-board>
 </div>

@@ -1,4 +1,5 @@
 <div class="wrapper">
-   <app-new-task></app-new-task>
-   <app-task-board></app-task-board>
+   <p *ngIf="user.role == 'Anonym'">Для использования продукта авторизуйтесь на сайте!</p>
+   <app-new-task *ngIf="user.role != 'Anonym'"></app-new-task>
+   <app-task-board *ngIf="user.role != 'Anonym'"></app-task-board>
 </div>

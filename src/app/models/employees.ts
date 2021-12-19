@@ -12,3 +12,14 @@ export interface IEmployee {
    name: string,
    position: Position
 }
+
+export enum Role {
+   anonym = "Anonym",
+   employee = "Employee",
+   admin = "Admin"
+}
+
+export interface IUser {
+   name: string | null,
+   role: Role
+}

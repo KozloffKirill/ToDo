@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { IEmployee } from "../../models/employees";
+import { IEmployee, IUser, Role } from "../../models/employees";
 
 export const addEmployee = createAction(
    '[Employees] Add Employee',
@@ -19,4 +19,9 @@ export const deleteEmployee = createAction(
 export const deleteEmployeeSuccess = createAction(
    '[Employees] Delete Employee Success',
    props<{ employeeId: number }>()
+);
+
+export const editUser = createAction(
+   '[User] Edit User',
+   props<{ user: IUser }>()
 );

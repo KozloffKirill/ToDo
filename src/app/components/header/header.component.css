@@ -26,14 +26,25 @@
    font-size: 36px;
 }
 
-.login-button {
+.login {
+   display: flex;
+   align-items: center;
    margin-left: auto;
+}
+
+.user-name {
+   margin-right: 10px;
+   font-size: 20px;
+   color:white;
+}
+
+.login-button, .logout-button {
    font-size: 20px;
    color:white;
    background-color: transparent;
    border: none;
 }
 
-.login-button:hover {
+.login-button:hover, .logout-button:hover {
    opacity: 0.6;
 }

@@ -1,9 +1,9 @@
 <h1>ВХОД</h1>
 <form>
-   <input type="text" placeholder="Логин">
-   <input type="text" placeholder="Пароль">
+   <input type="text" placeholder="Логин" [(ngModel)]="userLogin" [ngModelOptions]="{standalone: true}">
+   <input type="password" placeholder="Пароль" [(ngModel)]="userPassword" [ngModelOptions]="{standalone: true}">
 </form>
-<button type="button" class="login-button">Войти</button>
+<button type="button" class="login-button" (click)="userAuthorization()">Войти</button>
 <button mat-dialog-close class="close-button">
    <span>&#10006;</span>
 </button>

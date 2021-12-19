@@ -2,6 +2,10 @@
    <div class="flex-container">
       <img src="../../../assets/img/mian_header.png" class="main-header">
       <h1 class="title">Sueta Software</h1>
-      <button type="button" class="login-button" (click)="login()">Войти</button>
+      <div class="login">
+         <p class="user-name" *ngIf="user.name">{{user.name}}</p>
+         <button type="button" class="login-button" (click)="login()" *ngIf="user.role == 'Anonym'">Войти</button>
+         <button type="button" class="logout-button" (click)="logout()" *ngIf="user.role != 'Anonym'">Выйти</button>
+      </div>
    </div>
 </div>
