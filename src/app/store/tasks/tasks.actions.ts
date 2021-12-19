@@ -30,3 +30,8 @@ export const editTaskSuccess = createAction(
    '[Tasks] Edit Task Success',
    props<{ task: ITask }>()
 );
+
+export const editTaskExecutor = createAction(
+   '[Tasks] Edit Task Executor',
+   props<{ employeeName: string }>()
+);

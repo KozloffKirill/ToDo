@@ -97,6 +97,20 @@ export const _tasksReducer = createReducer(
          })
       }
    )),
+
+   on(TasksActions.editTaskExecutor, (state, executor) => (
+      {
+         ...state,
+         tasks: state.tasks.map((task) => {
+            if (task.executor == executor.employeeName) {
+               let newTask = Object.assign({}, task);
+               newTask.executor = null;
+               return newTask;
+            }
+            return task;
+         })
+      }
+   )),
 );
 
 export function tasksReducer(state: any, action: any) {
