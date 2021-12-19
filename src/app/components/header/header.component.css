@@ -25,3 +25,15 @@
    color: white;
    font-size: 36px;
 }
+
+.login-button {
+   margin-left: auto;
+   font-size: 20px;
+   color:white;
+   background-color: transparent;
+   border: none;
+}
+
+.login-button:hover {
+   opacity: 0.6;
+}

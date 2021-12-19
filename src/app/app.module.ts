@@ -24,6 +24,7 @@ import { TeamComponent } from './components/team/team.component';
 import { NewEmployeeComponent } from './components/new-employee/new-employee.component';
 import { EmployeeCardComponent } from './components/employee-card/employee-card.component';
 import { EmployeeBoardComponent } from './components/employee-board/employee-board.component';
+import { AuthorizationComponent } from './components/authorization/authorization.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EmployeeBoardComponent } from './components/employee-board/employee-boa
     TeamComponent,
     NewEmployeeComponent,
     EmployeeCardComponent,
-    EmployeeBoardComponent
+    EmployeeBoardComponent,
+    AuthorizationComponent
   ],
   imports: [
     BrowserModule,

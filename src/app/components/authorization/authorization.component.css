@@ -1,0 +1,51 @@
+:host {
+   display: block;
+   position: relative;
+   width: 560px;
+   border-radius: 10px;
+   padding: 42px 25px 42px;
+   background-color: white;
+   box-shadow: 0 0 10px 3px rgba(140, 140, 140, 1);
+}
+
+h1 {
+   margin-bottom: 14px;
+   font-size: 30px;
+   color: #2d2d2d;
+   text-align: center;
+}
+
+form input {
+   display: block;
+   padding: 8px 16px;
+   box-sizing: border-box;
+   width: 100%;
+   border: 1px solid #d1e2fc;
+   border-radius: 6px;
+   margin-bottom: 21px;
+}
+
+.login-button {
+   width: 100%;
+   padding: 9px 18px;
+   background-color: #2875eb;
+   border: none;
+   border-radius: 6px;
+   color: white;
+   transition: opacity 0.2s linear;
+}
+
+.login-button:hover {
+   opacity: 0.8;
+}
+
+.close-button {
+   position: absolute;
+   padding: 0;
+   background-color: transparent;
+   border: none;
+   font-size: 20px;
+   right: 25px;
+   top: 15px;
+   color: #2d2d2d;
+}
