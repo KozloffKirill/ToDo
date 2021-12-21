@@ -29,7 +29,7 @@ export class TaskEditorComponent implements OnInit, OnDestroy {
     "taskDescription": new FormControl(this.task.description, Validators.required),
     "taskExecutor": new FormControl(this.task.executor),
     "taskPriority": new FormControl(this.task.priority),
-    "taskRemainingWork": new FormControl(this.task.remainingWork, Validators.pattern(RegExp('^[1-9]\\d*$')))
+    "taskRemainingWork": new FormControl(this.task.remainingWork, Validators.pattern(RegExp('^[0-9]\\d*$')))
   });
   private _taskEditFormSub = this.taskEditForm.valueChanges.subscribe(
     () => this.isChanged = true
