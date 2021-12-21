@@ -12,3 +12,29 @@ p {
    color: #4c4c4c;
    font-size: 36px;
 }
+
+.weather {
+   background-color: white;
+   padding: 8px 12px;
+   border-radius: 10px;
+   position: fixed;
+   right: 20px;
+   bottom: 60px;
+   box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+}
+
+.city {
+   margin-bottom: 4px;
+   font-size: 20px;
+   color: #4c4c4c;
+}
+
+.temperature {
+   font-size: 18px;
+   color: #4c4c4c;
+}
+
+.humidity {
+   font-size: 18px;
+   color: #4c4c4c;
+}

@@ -2,4 +2,9 @@
    <p *ngIf="user.role == 'Anonym'">Для использования продукта авторизуйтесь на сайте!</p>
    <app-new-task *ngIf="user.role != 'Anonym'"></app-new-task>
    <app-task-board *ngIf="user.role != 'Anonym'"></app-task-board>
+   <div class="weather">
+      <p class="city">Санкт-Петербург</p>
+      <p class="temperature">Температура: {{temperature}}&#8451;</p>
+      <p class="humidity">Влажность: {{humidity}}%</p>
+   </div>
 </div>
