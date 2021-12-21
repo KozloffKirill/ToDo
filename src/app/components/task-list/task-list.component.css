@@ -55,7 +55,7 @@
    display: flex;
    align-items: center;
    padding: 8px 12px;
-   height: 45px;
+   height: 55px;
    border: 2px dashed grey;
    color: grey;
    border-radius: 10px;
@@ -63,7 +63,7 @@
 }
 
 ul {
-   min-height: 60px;
+   min-height: 74px;
 }
 
 .task {

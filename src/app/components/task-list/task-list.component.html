@@ -5,7 +5,7 @@
    <p class="title">
       {{titles[taskType]}}
    </p>
-   <ul [ngClass]="{'empty': taskType == 'Trash' && tasks.length == 0}" cdkDropList [cdkDropListData]="tasks" (cdkDropListDropped)="drop($event)">
+   <ul #list [ngClass]="{'empty': taskType == 'Trash' && tasks.length == 0 && listHeight < 80}" cdkDropList [cdkDropListData]="tasks" (cdkDropListDropped)="drop($event)">
       <li class="task" *ngFor="let task of tasks" cdkDrag>
          <app-task [task]="task"></app-task>
       </li>
