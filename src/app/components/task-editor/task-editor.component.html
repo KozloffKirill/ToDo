@@ -24,7 +24,7 @@
          </div>
          <div class="task-remaining-work">
             <p>Время работы (в часах):</p>
-            <input type="number" min="0" formControlName="taskRemainingWork">
+            <input type="number" min="0" formControlName="taskRemainingWork" [ngClass]="{'danger-warning': taskEditForm.controls['taskRemainingWork'].invalid}">
          </div>
       </div>
    </div>
@@ -32,7 +32,7 @@
       <button mat-dialog-close class="close-button">
          <span>Закрыть</span>
       </button>
-      <button class="edit-button" (click)="editTask()" [disabled]="!taskEditForm.dirty || taskEditForm.controls['taskName'].invalid || taskEditForm.controls['taskDescription'].invalid">
+      <button class="edit-button" (click)="editTask()" [disabled]="!isChanged || taskEditForm.invalid">
          <span>Сохранить</span>
       </button>
    </div>

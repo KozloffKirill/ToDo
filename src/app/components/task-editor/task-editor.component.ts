@@ -14,6 +14,8 @@ import { editTask } from 'src/app/store/tasks/tasks.actions';
 })
 export class TaskEditorComponent implements OnInit, OnDestroy {
 
+  public isChanged: boolean = false;
+
   public employees: IEmployee[] = [];
   public priorities: string[] = ['Low', 'Medium', 'High'];
   private _sub = this._store.select(selectEmployees).subscribe(
@@ -27,8 +29,11 @@ export class TaskEditorComponent implements OnInit, OnDestroy {
     "taskDescription": new FormControl(this.task.description, Validators.required),
     "taskExecutor": new FormControl(this.task.executor),
     "taskPriority": new FormControl(this.task.priority),
-    "taskRemainingWork": new FormControl(this.task.remainingWork)
+    "taskRemainingWork": new FormControl(this.task.remainingWork, Validators.pattern(RegExp('^[1-9]\\d*$')))
   });
+  private _taskEditFormSub = this.taskEditForm.valueChanges.subscribe(
+    () => this.isChanged = true
+  );
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public task: ITask,
@@ -41,17 +46,21 @@ export class TaskEditorComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this._sub.unsubscribe();
+    this._taskEditFormSub.unsubscribe();
   }
 
   public editTask() {
-    this._store.dispatch(editTask({ task: {
-      ...this.task,
-      name: this.taskEditForm.controls["taskName"].value,
-      description: this.taskEditForm.controls["taskDescription"].value,
-      executor: this.taskEditForm.controls["taskExecutor"].value == 'null' ? null: this.taskEditForm.controls["taskExecutor"].value,
-      priority: this.taskEditForm.controls["taskPriority"].value,
-      remainingWork: this.taskEditForm.controls["taskRemainingWork"].value,
-    } }));
+    this._store.dispatch(editTask({
+      task: {
+        ...this.task,
+        name: this.taskEditForm.controls["taskName"].value,
+        description: this.taskEditForm.controls["taskDescription"].value,
+        executor: this.taskEditForm.controls["taskExecutor"].value == 'null' ? null : this.taskEditForm.controls["taskExecutor"].value,
+        priority: this.taskEditForm.controls["taskPriority"].value,
+        remainingWork: this.taskEditForm.controls["taskRemainingWork"].value,
+      }
+    }));
+    this.isChanged = false;
   }
 
 }
