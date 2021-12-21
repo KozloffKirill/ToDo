@@ -34,8 +34,8 @@ export const initialState: IEmployeesState = {
       },
    ],
    user: {
-      name: "Кисляков Никита",
-      role: Role.admin
+      name: null,
+      role: Role.anonym
    }
 }
 
