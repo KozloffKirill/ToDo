@@ -58,3 +58,7 @@
 :host-context(app-task-list .container.trash):hover {
    background-color: #fbdfdc;
 }
+
+:host-context(app-task-list .container, .cdk-drag-preview) {
+   border-color: transparent;
+}

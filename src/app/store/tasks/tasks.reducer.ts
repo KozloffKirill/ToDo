@@ -13,26 +13,26 @@ export const initialState: ITasksState = {
    tasks: [
       {
          id: TasksHelper.getNewId(),
-         name: 'Купить домой очень большой пылесос',
-         description: 'Мать сказала купить пылесос',
-         status: TaskType.Active,
+         name: '1',
+         description: 'Описание задачи 1',
+         status: TaskType.Backlog,
          priority: PriorityType.Low,
          executor: null,
          remainingWork: 10,
       },
       {
          id: TasksHelper.getNewId(),
-         name: 'Покормить кота',
-         description: 'Надо срочно покормить кота, он не ел много дней',
-         status: TaskType.Completed,
+         name: '2',
+         description: 'Описание задачи 2',
+         status: TaskType.Backlog,
          priority: PriorityType.Medium,
          executor: 'Кисляков Никита',
          remainingWork: 12,
       },
       {
          id: TasksHelper.getNewId(),
-         name: 'Доделать курсовую работу',
-         description: 'нада делать ыыыы',
+         name: '3',
+         description: 'Описание задачи 3',
          status: TaskType.Active,
          priority: PriorityType.High,
          executor: 'Козлов Вячеслав',
@@ -40,31 +40,85 @@ export const initialState: ITasksState = {
       },
       {
          id: TasksHelper.getNewId(),
-         name: 'Приготовить кашу',
-         description: 'Надо приготовить овсяную кашу на завтрак',
-         status: TaskType.Backlog,
+         name: '4',
+         description: 'Описание задачи 4',
+         status: TaskType.Active,
          priority: PriorityType.Low,
          executor: null,
          remainingWork: 2,
       },
       {
          id: TasksHelper.getNewId(),
-         name: 'Название задачи #5',
-         description: 'Описание задачи описание задачи описание задачи описание задачи описание задачи',
-         status: TaskType.Backlog,
+         name: '5',
+         description: 'Описание задачи 5',
+         status: TaskType.Active,
          priority: PriorityType.High,
          executor: 'Козлов Кирилл',
          remainingWork: 5,
       },
       {
          id: TasksHelper.getNewId(),
-         name: 'Помогите',
-         description: 'Меня держат здесь взаперти',
-         status: TaskType.Active,
+         name: '6',
+         description: 'Описание задачи 6',
+         status: TaskType.Completed,
          priority: PriorityType.Low,
          executor: 'Загладкин Илья',
          remainingWork: 1,
       },
+      //{
+      //   id: TasksHelper.getNewId(),
+      //   name: 'Купить домой очень большой пылесос',
+      //   description: 'Мать сказала купить пылесос',
+      //   status: TaskType.Active,
+      //   priority: PriorityType.Low,
+      //   executor: null,
+      //   remainingWork: 10,
+      //},
+      //{
+      //   id: TasksHelper.getNewId(),
+      //   name: 'Покормить кота',
+      //   description: 'Надо срочно покормить кота, он не ел много дней',
+      //   status: TaskType.Completed,
+      //   priority: PriorityType.Medium,
+      //   executor: 'Кисляков Никита',
+      //   remainingWork: 12,
+      //},
+      //{
+      //   id: TasksHelper.getNewId(),
+      //   name: 'Доделать курсовую работу',
+      //   description: 'нада делать ыыыы',
+      //   status: TaskType.Active,
+      //   priority: PriorityType.High,
+      //   executor: 'Козлов Вячеслав',
+      //   remainingWork: 0,
+      //},
+      //{
+      //   id: TasksHelper.getNewId(),
+      //   name: 'Приготовить кашу',
+      //   description: 'Надо приготовить овсяную кашу на завтрак',
+      //   status: TaskType.Backlog,
+      //   priority: PriorityType.Low,
+      //   executor: null,
+      //   remainingWork: 2,
+      //},
+      //{
+      //   id: TasksHelper.getNewId(),
+      //   name: 'Название задачи #5',
+      //   description: 'Описание задачи описание задачи описание задачи описание задачи описание задачи',
+      //   status: TaskType.Backlog,
+      //   priority: PriorityType.High,
+      //   executor: 'Козлов Кирилл',
+      //   remainingWork: 5,
+      //},
+      //{
+      //   id: TasksHelper.getNewId(),
+      //   name: 'Помогите',
+      //   description: 'Меня держат здесь взаперти',
+      //   status: TaskType.Active,
+      //   priority: PriorityType.Low,
+      //   executor: 'Загладкин Илья',
+      //   remainingWork: 1,
+      //},
    ]
 }
 
@@ -109,6 +163,13 @@ export const _tasksReducer = createReducer(
             }
             return task;
          })
+      }
+   )),
+
+   on(TasksActions.editTaskOrderSuccess, (state, params) => (
+      {
+         ...state,
+         tasks: params.tasks
       }
    )),
 );

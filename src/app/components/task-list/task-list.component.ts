@@ -1,8 +1,9 @@
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 import { ITask, TaskType } from 'src/app/models/tasks';
-import { deleteTasks } from 'src/app/store/tasks/tasks.actions';
+import { deleteTasks, editTaskOrder } from 'src/app/store/tasks/tasks.actions';
 import { selectTypeTasks } from 'src/app/store/tasks/tasks.selectors';
 
 @Component({
@@ -47,6 +48,16 @@ export class TaskListComponent implements OnChanges, OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this._tasksSub.unsubscribe();
+  }
+
+  public drop(event: CdkDragDrop<ITask[]>) {
+    if(event.item.dropContainer.data[event.previousIndex].status == this.taskType && event.previousIndex == event.currentIndex) return;
+    this._store.dispatch(editTaskOrder(
+      {
+        task: event.item.dropContainer.data[event.previousIndex],
+        newStatus: this.taskType,
+        preTask: this.tasks[event.currentIndex]
+      }));
   }
 
 }

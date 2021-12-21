@@ -26,7 +26,7 @@ export class NewTaskComponent implements OnInit {
       id: TasksHelper.getNewId(),
       name: this.taskName,
       description: this.taskDescription,
-      status: TaskType.Trash,
+      status: TaskType.Backlog,
       executor: null,
       remainingWork: 0,
       priority: PriorityType.Low
